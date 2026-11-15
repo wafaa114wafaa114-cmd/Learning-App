@@ -6,8 +6,15 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		091D54AC30A2F1E200AE0DB4 /* LearningAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091D54AB30A2F1E200AE0DB4 /* LearningAppApp.swift */; };
+		091D54B030A2F1E300AE0DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091D54AF30A2F1E300AE0DB4 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		091D54A830A2F1E200AE0DB4 /* LearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		091D54AB30A2F1E200AE0DB4 /* LearningAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppApp.swift; sourceTree = "<group>"; };
+		091D54AF30A2F1E300AE0DB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -31,6 +38,8 @@
 			isa = PBXGroup;
 			children = (
 				091D54AA30A2F1E200AE0DB4 /* LearningApp */,
+				091D54AF30A2F1E300AE0DB4 /* Assets.xcassets */,
+				091D54AB30A2F1E200AE0DB4 /* LearningAppApp.swift */,
 				091D54A930A2F1E200AE0DB4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +111,7 @@
 		091D54A630A2F1E200AE0DB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				091D54B030A2F1E300AE0DB4 /* Assets.xcassets in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
@@ -110,6 +120,7 @@
 		091D54A430A2F1E200AE0DB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				091D54AC30A2F1E200AE0DB4 /* LearningAppApp.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */

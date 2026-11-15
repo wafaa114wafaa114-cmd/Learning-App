@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct OnboardingView: View {
     @State private var viewModel = OnboardingViewModel()
 
     var body: some View {
@@ -14,7 +14,7 @@ struct ContentView: View {
 
                 Image(systemName: "flame.fill")
                     .font(.system(size: 36, weight: .bold))
-                    .foregroundStyle(Color(red: 1.0, green: 0.57, blue: 0.19))
+                    .foregroundStyle(Color.appOrange)
                     .frame(maxWidth: .infinity)
                     .padding(.top, 60)
 
@@ -25,7 +25,7 @@ struct ContentView: View {
 
                 Text("This app will help you learn everyday!")
                     .font(.system(size: 17))
-                    .foregroundStyle(Color(red: 0.6, green: 0.6, blue: 0.6))
+                    .foregroundStyle(Color.appGray)
                     .padding(.top, 4)
 
                 Text("I want to learn")
@@ -55,14 +55,11 @@ struct ContentView: View {
                         } label: {
                             Text(duration.rawValue)
                                 .font(.system(size: 17, weight: .medium))
-                                .foregroundStyle(viewModel.selectedDuration == duration ? .white : Color(red: 0.6, green: 0.6, blue: 0.6))
-                                .padding(.horizontal, 20)
-                                .padding(.vertical, 14)
-                                .background(
-                                    Capsule()
-                                        .fill(viewModel.selectedDuration == duration ? Color(red: 1.0, green: 0.57, blue: 0.19) : Color(red: 0.15, green: 0.15, blue: 0.15))
-                                )
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 4)
                         }
+                        .glassButton(selected: viewModel.selectedDuration == duration)
+                        .buttonBorderShape(.capsule)
                     }
                 }
                 .padding(.top, 12)
@@ -75,18 +72,15 @@ struct ContentView: View {
                     } label: {
                         Text("Start Learning")
                             .font(.system(size: 17, weight: .medium))
-                            .foregroundStyle(.white)
-                            .padding(.horizontal, 32)
-                            .padding(.vertical, 14)
-                            .background(
-                                Capsule()
-                                    .fill(Color(red: 1.0, green: 0.57, blue: 0.19))
-                            )
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 6)
                     }
+                    .glassButton()
+                    .buttonBorderShape(.capsule)
 
                     Text("You can edit your desire later")
                         .font(.system(size: 13))
-                        .foregroundStyle(Color(red: 0.6, green: 0.6, blue: 0.6))
+                        .foregroundStyle(Color.appGray)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.bottom, -15)
@@ -97,5 +91,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    OnboardingView()
 }
