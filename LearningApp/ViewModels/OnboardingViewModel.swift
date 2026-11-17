@@ -9,11 +9,15 @@ class OnboardingViewModel {
         selectedDuration = duration
     }
 
+    // الزر ما ينضغط إلا لو كتب هدف
+    var canStart: Bool {
+        !goal.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+
     func startLearning() {
-        UserDefaults.standard.set(goal, forKey: "goal")
+        UserDefaults.standard.set(goal.trimmingCharacters(in: .whitespacesAndNewlines), forKey: "goal")
         UserDefaults.standard.set(selectedDuration.rawValue, forKey: "duration")
         UserDefaults.standard.set(Date(), forKey: "goalStartedAt")
         LearningLog.reset()
-        print("Goal: \(goal), Duration: \(selectedDuration.rawValue)")
     }
 }

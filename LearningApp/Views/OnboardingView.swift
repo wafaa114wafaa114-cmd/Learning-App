@@ -3,6 +3,9 @@ import SwiftUI
 struct OnboardingView: View {
     @State private var viewModel = OnboardingViewModel()
 
+    // نستدعيها بعد الحفظ (ننتقل لشاشة Activity)
+    var onStart: () -> Void = {}
+
     var body: some View {
         @Bindable var viewModel = viewModel
 
@@ -69,6 +72,7 @@ struct OnboardingView: View {
                 VStack(spacing: 12) {
                     Button {
                         viewModel.startLearning()
+                        onStart()
                     } label: {
                         Text("Start Learning")
                             .font(.system(size: 17, weight: .medium))
@@ -77,6 +81,7 @@ struct OnboardingView: View {
                     }
                     .glassButton()
                     .buttonBorderShape(.capsule)
+                    .disabled(!viewModel.canStart)
 
                     Text("You can edit your desire later")
                         .font(.system(size: 13))
