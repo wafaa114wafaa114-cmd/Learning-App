@@ -12,6 +12,8 @@ class OnboardingViewModel {
     func startLearning() {
         UserDefaults.standard.set(goal, forKey: "goal")
         UserDefaults.standard.set(selectedDuration.rawValue, forKey: "duration")
+        UserDefaults.standard.set(Date(), forKey: "goalStartedAt")
+        LearningLog.reset()
         print("Goal: \(goal), Duration: \(selectedDuration.rawValue)")
     }
 }
