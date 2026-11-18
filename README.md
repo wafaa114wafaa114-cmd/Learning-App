@@ -26,7 +26,7 @@ An iOS app that helps you build a daily learning habit. Set a goal and a duratio
 ## Getting Started
 
 1. Open `LearningApp.xcodeproj` in Xcode.
-2. Choose an iOS 26+ simulator or device.
+2. Choose an iOS 27+ simulator or device.
 3. Press Run (⌘R).
 
 The first launch opens Onboarding. After that, the app opens directly on Activity. To start over, delete the app from the simulator or device.
