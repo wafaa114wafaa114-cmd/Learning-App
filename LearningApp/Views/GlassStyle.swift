@@ -12,9 +12,7 @@ extension View {
         if selected {
             self
                 .buttonStyle(.glassProminent)
-                .tint(tint.opacity(1.0))
-                .brightness(0.12)
-                .saturation(1.15)
+                .tint(tint)
         } else {
             self
                 .buttonStyle(.glass)
